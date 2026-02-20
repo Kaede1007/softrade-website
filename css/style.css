@@ -769,9 +769,8 @@ section[id] {
 フッター
 ================================================== */
 .footer {
-  background: #e0f2f7; /* 薄い水色 */
+  background: #e0f2f7;
   padding: 60px 0 20px;
-  margin-top: 80px;
   position: relative;
 }
 
