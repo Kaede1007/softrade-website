@@ -13,6 +13,12 @@ body {
   line-height: 1.6;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .header,
 .footer {
   font-family: "Noto Sans JP", sans-serif;
@@ -247,14 +253,16 @@ ul {
 
 .anniv-num {
   display: block;
-  font-size: 180px;
+  font-size: clamp(80px, 12vw, 180px);
   font-weight: bold;
   font-family: "Times New Roman", serif;
+  line-height: 1;
 }
 
 .anniv-text {
   display: block;
-  font-size: 60px;
+  /* スマホ等で最小24px、画面幅の4%で伸縮し、最大60pxで止まる */
+  font-size: clamp(24px, 4vw, 60px);
   font-weight: bold;
   font-family: "Times New Roman", serif;
   margin-top: 5px;
@@ -1842,19 +1850,19 @@ iframe {
 
   .top-mv-anniv-box {
     position: absolute;
-    right: 0;
+    right: 8%;
     top: 30%;
     transform: translateY(-50%);
     margin: 0;
     opacity: 0.25;
   }
 
-  .anniv-num {
-    font-size: 14vw; /* 画面幅の14%の大きさ */
+  /* .anniv-num {
+    font-size: 14vw; 
   }
   .anniv-text {
-    font-size: 5vw; /* 画面幅の5%の大きさ */
-  }
+    font-size: 5vw; 
+  } */
 
   .main-copy {
     font-size: 2.5rem; /* 40px相当 */
@@ -2053,13 +2061,13 @@ iframe {
     z-index: 0;
   }
 
-  .anniv-num {
+  /* .anniv-num {
     font-size: 6.25rem; /* 100px相当 */
-  }
+  /* } */
 
-  .anniv-text {
+  /* .anniv-text {
     font-size: 2rem; /* 32px相当 */
-  }
+  /* } */
 
   /* キャッチコピー */
   .text-slider {
